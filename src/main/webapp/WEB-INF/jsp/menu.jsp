@@ -9,12 +9,17 @@
 <html>
 <head>
     <title>Menu</title>
+    <!-- récupération variable utilisateur de session -->
+    <jsp:useBean id="utilisateur" type="modele.Utilisateur" scope="session"></jsp:useBean>
 </head>
 <body>
+
+<h1>${utilisateur.login}</h1>
+
 <ul>
     <li><a href="/pel/parisouverts">Affichez les matchs ouverts aux paris</a></li>
     <li><a href="/pel/mesparis">Affichez mes paris</a></li>
-    <li><a href="/pel/deconnexion">Se dÃ©connecter</a></li>
+    <li><a href="/pel/deconnexion">Se déconnecter</a></li>
 </ul>
 
 </body>
