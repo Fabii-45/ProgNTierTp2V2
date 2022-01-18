@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: tplocal
@@ -12,6 +13,11 @@
     <jsp:useBean id="erreur" class="java.lang.String" scope="request"></jsp:useBean>
 </head>
 <body>
+<c:if test="${erreur.length()>0}">
+    <span style="color:red;">
+        <c:out value="${erreur}"></c:out>
+    </span>
+</c:if>
 <h2>Veuillez entrez vos informations : </h2>
 <form action="/pel/connexion" method="post">
     <div>
